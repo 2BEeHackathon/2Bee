@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js"></script>
+    <style type="text/css">
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+
+      anychart.onDocumentReady(function () {
+        anychart.data.loadJsonFile("./images.json", function (data) {
+
+          // create a chart from the loaded data
+          var chart = anychart.graph(data);
+
+          // set the title
+          chart.title("Network Graph showing the government body of the republic of tunisia");
+
+          // access nodes
+          var nodes = chart.nodes();
+
+          // set the size of nodes
+          nodes.normal().height(30);
+          nodes.hovered().height(45);
+          nodes.selected().height(45);
+
+          // set the stroke of nodes
+          nodes.normal().stroke(null);
+          nodes.hovered().stroke("#333333", 3);
+          nodes.selected().stroke("#333333", 3);
+
+          // enable the labels of nodes
+          chart.nodes().labels().enabled(true);
+
+          // configure the labels of nodes
+          chart.nodes().labels().format("{%id}");
+          chart.group("corrupt").labels().fontColor("#FF0000");
+        
+          chart.nodes().labels().fontSize(12);
+          chart.nodes().labels().fontWeight(600);
+       
+
+          // draw the chart
+          chart.container("container").draw();
+
+        });
+      });
+
+    </script>
+    <div>
+        <h3>record of documents<h3>
+        <ul>
+            <li> 
+            place of corruption: three lawyers <br>
+            date of publish: 13 mars 2020<br>
+            head of office at the time: foulen fouleni
+            proof of fallice:
+            
+  <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.boatsgroup.com%2Fimages%2F1%2F68%2F83%2F7276883_20200217025509953_1_XLARGE.jpg&f=1&nofb=1&ipt=e212a351114fbad781b3a87c54053085cceb6300a7e8198d4378e8a6ed8b1493&ipo=images">link</a>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+  </body>
+</html>

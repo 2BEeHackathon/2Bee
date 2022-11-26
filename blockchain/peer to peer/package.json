@@ -1,0 +1,28 @@
+{
+  "name": "a",
+  "version": "0.1.0",
+  "description": "",
+  "main": "Graphchain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2BEeHackathon/2Bee"
+  },
+  "keywords": [
+    "blockchain",
+    "sha256",
+    "crypto"
+  ],
+  "author": "2Bee",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/2BEeHackathon/2Bee#issues"
+  },
+  "homepage": "https://github.com/2BEeHackathon/2Bee#readme",
+  "dependencies": {
+    "elliptic": "^6.5.4",
+    "ws": "^8.3.0"
+  }
+}
